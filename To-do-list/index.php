@@ -53,7 +53,7 @@ if (isset($_POST['action']) && $_POST['action'] === 'delete-task') {
     fclose($fo);
     
 } 
-}
+
 ?>
 <link rel="stylesheet" href="style.css">
 
@@ -108,14 +108,14 @@ if (isset($_POST['action']) && $_POST['action'] === 'delete-task') {
     
     let inputTitle = form.document.querySelector('input[name-title]')
     let inputTaskIndex = form.querySelector('input[name-taskIndex]')
-    let inputAction = form.querySelector('input[name=action]')
+    let inputAction = form.querySelector('input[name-action]')
     list.addEventListener('click', function (event) {
         if (event.target.tagName === 'SPAN'){
             let key = event.target.querySelector('input[name=taskClickedKey]').value
             
             inputTitle.value = 'trying to delete key: ' + key
             inputTaskIndex.value = key
-            inputActiion.value = 'delete-task'
+            inputAction.value = 'delete-task'
           //alert('you are trying to delete a task: ' + key)
           form.submit()
         }

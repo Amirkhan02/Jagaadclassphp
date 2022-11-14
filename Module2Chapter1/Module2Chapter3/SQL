@@ -19,3 +19,19 @@ CREATE TABLE task (
         UPDATE task 
         SET created_at = NOW()
         WHERE task_id =1;
+
+
+CREATE TABLE exercise1 (
+    exercise_id INTEGER NOT NULL AUTO_INCREMENT,
+    class VARCHAR(50) NOT NULL,
+    course TEXT NOT NULL, 
+    exercise_grade VARCHAR(50) NOT NULL,
+    created_at DATE NOT NULL,
+    PRIMARY KEY (task_id)
+    );
+
+     INSERT INTO exercise1
+        (exercise_id, class, course, exercise_grade, created_at)
+        VALUES
+        (1, 'php', 'mySql', 54, Now())
+        

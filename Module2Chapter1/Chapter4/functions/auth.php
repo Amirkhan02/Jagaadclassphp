@@ -54,8 +54,11 @@ function logout(): void
         $_SESSION['logged_in'], 
         $_SESSION['logged_user']
     );
-
-die;
 }
-
-
+function protectPage(): void
+{
+    if (! isAuthenticated()) {
+        logout();
+        header('Location: /login.php');
+}
+}

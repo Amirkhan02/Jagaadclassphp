@@ -18,17 +18,21 @@ function validateInputs(array $inputs): bool
         throw new InvalidArgumentException('Invalid amount');
     }
 
+    $validTypes = ['income', 'expenses'];
+    if (! in_array($inputs ['type'], $validTypes)) {
+        throw new InvalidArgumentException('Invalid type, it must be income or expenses');
+    }
 
     $validStatus = ['paid', 'unpaid'];
-if (in_array($inputs['status'], $validStatus)) {
+if ($inputs['type'] == 'expenses' && ! in_array($inputs['status'],  $validStatus)) {
     throw new InvalidArgumentException('Invalid status, it must be paid or unpaid');
 }
 
-
-$validTypes = ['income', 'expenses'];
-if (! in_array($inputs ['type'], $validTypes)) {
-    throw new InvalidArgumentException('Invalid type, it must be income or expenses');
+$validStatus = ['received', 'unreceived'];
+if ($inputs['type'] == 'income' && ! in_array($inputs['status'],  $validStatus)) {
+    throw new InvalidArgumentException('Invalid status, it must be received or unreceived');
 }
+
 return true;
 }
 

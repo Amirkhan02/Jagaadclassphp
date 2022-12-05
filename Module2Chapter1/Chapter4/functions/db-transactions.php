@@ -33,12 +33,15 @@ $fixedAccount
 $stmt->execute();
 }
 
-function findTransactions(): array
+function findTransactions(string $type): array
 {
     $mysqli = connect();
-$sql = <<<SQL
-    SELECT * FROM transactions
-    SQL; 
-    $result = $mysqli->query($sql);
+    $sql = 'SELECT * FROM transactions WHERE type = ?';
+
+    $stmt = $mysqli->prepare($sql);
+    $stmt->bind_param('s', $type);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
     return $result->fetch_all(MYSQLI_ASSOC);
 }

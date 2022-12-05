@@ -16,7 +16,11 @@ $inputs = [
 validateInputs($inputs);
 
 insertTransaction($inputs);
-   echo 'Transaction Created';
+
+
+   storeAlertMessage('<b>Success!</b> Transaction Created', ALERT_MSG_SUCCESS);
+   header("Location: /transactions.php?type=$inputs[type]");
+   die;
 } catch(InvalidArgumentException $exception) {
     echo $exception->getMessage();
 }

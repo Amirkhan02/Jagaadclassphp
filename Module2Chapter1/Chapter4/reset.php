@@ -1,13 +1,12 @@
+
 <?php 
-
-require_once __DIR__ . '/boot.php';
-protectPage();
-
+//assign $_GET['type'] to $type if it exist
+//the default is 'expenses'
 $type = $_GET['type'] ?? 'expenses';
 
 $validTypes = ['income', 'expenses'];
 if (! in_array($type, $validTypes)) {
-    die("I don't understand you :/");
+    die("I don't understand you:/");
 }
 
 if ($type === 'expenses') {
@@ -16,25 +15,20 @@ if ($type === 'expenses') {
     define('PAGE_TITLE', 'Income');
 }
 
-$transactions = findTransactions($type);
-
 require_once __DIR__ . '/views/header.php';
+require_once __DIR__ . '/functions/db-transactions.php';
 
-//var_dump($transactions);
+$transactions = findTransactions();
 ?>
-<?php if (hasAlertStatus(ALERT_MSG_SUCCESS)): ?>
-<i><?=extractAlertMessage()?></i><br />
-<?php endif ?>
-
- 
- <form method="post" action="actions/create-transaction.php">
+      <form method="post" action="actions/create-transaction.php">
       <label>Name:</label> <br/>
       <input type="text" name="name" placeholder="Name" />
       <br/>
+
       <label>Amount:</label> <br/>
       <input type="number" name="amount" placeholder="Amount" />
       <br/>
-     
+
       <label>Category:</label><br/>
       <select name="Category"> 
       <?php if ($type === 'expenses'): ?>
@@ -49,7 +43,7 @@ require_once __DIR__ . '/views/header.php';
         <option value="freelancing">Freelancing</option>
         <option value="investivement">Investivement</option>
       <?php endif ?>
-
+      
       <option value="others">Others</option>
       </select>
       <br/>
@@ -73,9 +67,8 @@ require_once __DIR__ . '/views/header.php';
         <?php else: ?>
             <option value="unreceived">Unreceived</option>
         <option value="received">Received</option>
-        <?php endif ?>
-        </select>
-      
+        <r?php endif ?>
+      </select>
       <br/>
       <input type="hidden" name="type" value="<?=$type?>" />
       <button type="submit">Create</button>
@@ -97,25 +90,19 @@ require_once __DIR__ . '/views/header.php';
         </tr>
     </thead>
     <tbody>
-    <?php foreach ($transactions as $transaction): ?>
+        <?php foreach ($transactions as $transaction): ?>
     <tr>
-            <td align="right"><?=$transaction['transaction_id']?></td>
+            <td><?=$transaction['transaction_id']?></td>
             <td><?=$transaction['name']?></td>
-            <td align="right">$ <?=$transaction['amount']?></td>
+            <td><?=$transaction['amount']?></td>
             <td><?=$transaction['category']?></td>
-            <td><?=date('M/d/y', strtotime($transaction['transaction_date']))?></td>
-            <td><?=$transaction['occurrence'] ? 'Monthly' : 'No'?></td>
+            <td><?=$transaction['transaction_date']?></td>
+            <td><?=$transaction['occurrence']?></td>
             <td><?=$transaction['status']?></td>
             <td><?=$transaction['account_id']?></td>
         </tr>
         <?php endforeach ?>
     </tbody>
-        </table>
-
-<?php 
-require_once __DIR__ . '/views/footer.php' 
-?>
-
-    
-      
-      
+    </table>
+ 
+    <?php require_once __DIR__ . '/views/footer.php' ?>

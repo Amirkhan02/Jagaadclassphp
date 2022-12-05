@@ -1,4 +1,9 @@
 <?php 
+
+require_once __DIR__ . '/boot.php';
+
+protectPage();
+
 define('PAGE_TITLE', 'Income');
 require_once __DIR__ . '/views/header.php' 
 ?>

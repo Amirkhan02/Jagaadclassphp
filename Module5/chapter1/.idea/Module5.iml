@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/php-http/message-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/graham-campbell/result-type" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/nyholm/psr7-server" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/nyholm/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/tuupola/callable-handler" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/tuupola/slim-basic-auth" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/tuupola/http-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/tuupola/slim-jwt-auth" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/phpoption/phpoption" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/nikic/fast-route" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/laminas/laminas-diactoros" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/ralouphie/getallheaders" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/fakerphp/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/fig/http-message-util" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/vlucas/phpdotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/slim/slim" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/slim/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/psr/http-server-middleware" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/psr/http-server-handler" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/psr/http-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson3/vendor/firebase/php-jwt" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

@@ -1,0 +1,21 @@
+{
+    "name": "module4/project",
+    "description": "API App",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "ApiProject\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hamme Shittu",
+            "email": "khanshittu50@gmail.com"
+        }
+    ],
+    "require": {
+        "league/route": "^5.1",
+        "laminas/laminas-diactoros": "^2.24",
+        "laminas/laminas-httphandlerrunner": "^2.5"
+    }
+}

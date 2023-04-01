@@ -1,0 +1,17 @@
+{
+    "name": "session",
+    "description": "session object",
+    "license": "no",
+    "autoload": {
+        "psr-4": {
+            "Jagaad\\Session\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hamme Shittu",
+            "email": "khanshittu50@gmail.com"
+        }
+    ],
+    "require": {}
+}

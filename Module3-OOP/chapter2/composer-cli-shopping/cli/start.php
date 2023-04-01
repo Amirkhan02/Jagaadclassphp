@@ -2,6 +2,7 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
+use Jagaad\presentation\clicheckout;
 use Jagaad\Shop\Product;
 use Jagaad\Shop\Cart;
 use Jagaad\Shop\Order;
@@ -23,19 +24,16 @@ echo <<<OUTPUT
         new Product('Mouse', 100),
         new Product('Monitor', 500),
     ];
-  
+
     $ls = "\n-------------\n";
+
+    $cliCheckout = new clicheckout();
+  
 
     $cart = new Cart;
     
     while (true) {
-        $productsOutput = "{$ls}Product list: \n";
-        foreach ($products as $key => $product) {
-            $productsOutput .= $key . ': ' . $product->name() . ' $' . $product->price() . PHP_EOL;
-        }
-        $productsOutput .= "{$ls}Q: To quit\nL: List cart products\n\n";
-        echo $productsOutput;
-    
+        $cliCheckout->printAllProducts();
         echo '> Cart products: ' . count($cart->products()) . PHP_EOL;
     
         $option = readline('Choose a product: ');
@@ -45,12 +43,8 @@ echo <<<OUTPUT
         }
     
         if ($option === 'L') {
-            system('clear');
-            echo $ls . "Cart products:\n";
-            foreach ($cart->products() as $key => $product) {
-                echo $key . ': ' . $product->name() . ' $' . $product->price() . PHP_EOL;
-            }
-    
+
+            $cliCheckout->printCartProducts($cart);
             readline('Enter to continue: ');
             system('clear');
             continue;
@@ -77,10 +71,7 @@ echo <<<OUTPUT
     echo $ls;
     
     system('clear');
-    echo $ls . "Cart products:\n";
-    foreach ($cart->products() as $key => $product) {
-        echo $key . ': ' . $product->name() . ' $' . $product->price() . PHP_EOL;
-    }
+$cliCheckout->printCartProducts($cart);
     
     $order = new Order($cart);
     echo 'Total: $' . $order->total() . PHP_EOL;

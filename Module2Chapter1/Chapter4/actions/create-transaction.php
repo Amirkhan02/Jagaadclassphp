@@ -11,6 +11,7 @@ $inputs = [
     'occurrence' => (bool)filter_input(INPUT_POST, 'occurrence'),
     'status' => filter_input(INPUT_POST, 'status'),
     'type' => filter_input(INPUT_POST, 'type'),
+    'account_id' => filter_input(INPUT_POST, 'account_id'),
 ];
 
 validateInputs($inputs);

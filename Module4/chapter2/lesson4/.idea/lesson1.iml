@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/pdo-appv2/vendor/fakerphp/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/pdo-appv2/vendor/phpoption/phpoption" />
+      <excludeFolder url="file://$MODULE_DIR$/pdo-appv2/vendor/squizlabs/php_codesniffer" />
+      <excludeFolder url="file://$MODULE_DIR$/pdo-appv2/vendor/graham-campbell/result-type" />
+      <excludeFolder url="file://$MODULE_DIR$/pdo-appv2/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/pdo-appv2/vendor/vlucas/phpdotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/pdo-appv2/vendor/phpstan/phpstan" />
+      <excludeFolder url="file://$MODULE_DIR$/pdo-appv2/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/pdo-appv2/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/pdo-appv2/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/pdo-appv2/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/pdo-appv2/vendor/composer" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

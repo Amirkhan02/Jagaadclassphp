@@ -2,6 +2,8 @@
 require_once __DIR__ . '/../boot.php';
 
 try{
+
+    
 $inputs = [
     'full_name' => filter_input(INPUT_POST, 'full_name'),
     'email' => filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL),

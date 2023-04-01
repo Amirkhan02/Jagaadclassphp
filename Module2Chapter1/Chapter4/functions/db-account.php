@@ -12,7 +12,7 @@ function insertAccount(array $inputs)
  ) VALUES (?, ?, ?, ?)
  SQL;
 
- $user_id = 1;
+ $user_id =  authenticatedUser()['id'];
 
 $stmt = $mysqli->prepare($sql);
 $stmt->bind_param(
@@ -40,9 +40,12 @@ function deleteAccount(int $accountId)
 function findAccounts(): array
 {
     $mysqli = connect();
-    $sql = 'SELECT*  FROM accounts';
+    $sql = 'SELECT*  FROM accounts WHERE user_id = ?';
 
+    $stmt = $mysqli->prepare($sql);
+    $stmt->bind_param('s', authenticatedUser()['id']);
+    $stmt->execute();
 
-    $result = $mysqli->query($sql);
+    $result = $stmt->get_result();
     return $result->fetch_all(MYSQLI_ASSOC);
 }

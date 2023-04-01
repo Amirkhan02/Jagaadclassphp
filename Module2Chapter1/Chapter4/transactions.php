@@ -17,6 +17,7 @@ if ($type === 'expenses') {
 }
 
 $transactions = findTransactions($type);
+$accounts = findAccounts();
 
 require_once __DIR__ . '/views/header.php';
 
@@ -75,6 +76,16 @@ require_once __DIR__ . '/views/header.php';
         <option value="received">Received</option>
         <?php endif ?>
         </select>
+        <br />
+
+        <label>Account:</label><br />
+      <select name="account_id" required> 
+        <option value=""></option>
+        <?php foreach ($accounts as $account): ?>
+     
+          <option value="<?=$account['account_id']?>"><?=$account['name']?></option>
+          <?php endforeach ?>
+      </select>
       
       <br/>
       <input type="hidden" name="type" value="<?=$type?>" />
@@ -106,7 +117,7 @@ require_once __DIR__ . '/views/header.php';
             <td><?=date('M/d/y', strtotime($transaction['transaction_date']))?></td>
             <td><?=$transaction['occurrence'] ? 'Monthly' : 'No'?></td>
             <td><?=$transaction['status']?></td>
-            <td><?=$transaction['account_id']?></td>
+            <td><?=$transaction['account_name']?></td>
         </tr>
         <?php endforeach ?>
     </tbody>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a9edbae6-daa4-4abc-8cfe-423235704856" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Module3-OOP/chapter2/composer-cli-shopping/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Module3-OOP/chapter2/composer-cli-shopping/.idea/composer-cli-shopping.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Module3-OOP/chapter2/composer-cli-shopping/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Module3-OOP/chapter2/composer-cli-shopping/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Module3-OOP/chapter2/composer-cli-shopping/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Module3-OOP/chapter2/composer-cli-shopping/cli/start.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Module3-OOP/chapter2/composer-cli-shopping/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Module3-OOP/chapter2/composer-cli-shopping/composer.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Module3-OOP/chapter2/composer-cli-shopping/src/Shop/Cart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Module3-OOP/chapter2/composer-cli-shopping/src/Shop/Order.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Module3-OOP/chapter2/composer-cli-shopping/src/Shop/Product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Module3-OOP/chapter2/composer-cli-shopping/src/presentation/CliCheckout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Module3-OOP/chapter2/lesson3/magic-method.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/Chapter3/Lesson1/pdo-Insert.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/Chapter3/Lesson1/pdo-Select.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/Chapter3/Lesson1/pdo-connection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/Chapter3/Manage-bills/database/create-tables.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/Chapter3/Manage-bills/database/tables.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module2Chapter1/Chapter4/actions/create-account.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module2Chapter1/Chapter4/actions/create-account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module2Chapter1/Chapter4/actions/create-transaction.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module2Chapter1/Chapter4/actions/create-transaction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module2Chapter1/Chapter4/actions/create-user.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module2Chapter1/Chapter4/actions/create-user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module2Chapter1/Chapter4/boot.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module2Chapter1/Chapter4/boot.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module2Chapter1/Chapter4/functions/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module2Chapter1/Chapter4/functions/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module2Chapter1/Chapter4/functions/db-account.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module2Chapter1/Chapter4/functions/db-account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module2Chapter1/Chapter4/functions/db-transactions.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module2Chapter1/Chapter4/functions/db-transactions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module2Chapter1/Chapter4/functions/validate-account.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module2Chapter1/Chapter4/functions/validate-account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module2Chapter1/Chapter4/report.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module2Chapter1/Chapter4/reset.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module2Chapter1/Chapter4/transactions.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module2Chapter1/Chapter4/transactions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module2Chapter1/Chapter4/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module2Chapter1/Chapter4/views/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module2Chapter1/php2c3l1exercise.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module2Chapter1/php2c3l1exercise.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module2project/functions/validatestudent.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module2project/functions/validatestudent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module2project/tables.SQL" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module2project/tables.SQL" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2M05BJB6HmPQYrx4dREDt8hHdjb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Amir/lesson1c2/Module4/chapter2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a9edbae6-daa4-4abc-8cfe-423235704856" name="Changes" comment="" />
+      <created>1676891523261</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676891523261</updated>
+      <workItem from="1676891524643" duration="82000" />
+      <workItem from="1676892020720" duration="197000" />
+      <workItem from="1676892766752" duration="363000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

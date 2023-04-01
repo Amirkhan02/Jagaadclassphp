@@ -6,7 +6,7 @@ $inputs = [
     'name' => filter_input(INPUT_POST, 'account_name'),
     'description' => filter_input(INPUT_POST, 'account_description'),
     'type' => filter_input(INPUT_POST, 'account_type'),
-    
+
 ];
 
 validateAccountInputs($inputs);

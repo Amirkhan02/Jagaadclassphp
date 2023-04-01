@@ -20,7 +20,8 @@ function extractAlertMessage() {
     return $message;
 }
 
-function storeAlertMessage(string $message, string $status) {
+function storeAlertMessage(string $message, string $status): void
+{
     $_SESSION['alert_message'] = $message;
     $_SESSION['alert_status'] = $status;
 }

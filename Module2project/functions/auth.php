@@ -30,7 +30,7 @@ if ($isValid) {
 function isAuthenticated(): bool
 {
     return isset($_SERVER['logged_in'])
-    && $_SESSION['looged'] == true;
+    && $_SESSION['logged'] == true;
 }
 
 function isAuthenticatedStudent(): ?string

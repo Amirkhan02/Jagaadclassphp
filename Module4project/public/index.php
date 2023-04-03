@@ -38,6 +38,19 @@ $router->post('/v2/blog/category', function (ServerRequestInterface $request) us
     return new Laminas\Diactoros\Response\JsonResponse($res, 201);
 });
 
+$router->post('/v3/blog/postsCategories', function (ServerRequestInterface $request) use ($router) {
+    $data = Json_decode($request->getBody()->getContents(), true, 512, JSON_THROW_ON_ERROR);
+    $conn = \ApiProject\Dbconnection::connect();
+    $postsCategories = new \ApiProject\Blogpost\CreateCategory($conn);
+    $id = $postsCategories->create($data);
+
+    $res = [
+        'status' => 'success',
+        'data' => ['id' => $id],
+    ];
+    return new Laminas\Diactoros\Response\JsonResponse($res, 201);
+});
+
 $response = $router->dispatch($request);
 (new Laminas\HttpHandlerRunner\Emitter\SapiEmitter)->emit($response);
 

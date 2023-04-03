@@ -2,7 +2,10 @@
 
 namespace OnlineShopping\Controller;
 
-use OnlineShopping\Model\ProductRepository;
+use OnlineShopping\Repository\ProductRepository;
+use OnlineShopping\Factory\PdoFactory;
+use OnlineShopping\Model\Cart;
+use OnlineShopping\Model\Product;
 
 class AddProductList implements Controller
 {
@@ -23,8 +26,5 @@ class AddProductList implements Controller
         $template = require __DIR__ . '/../View/home.php';
 
         return  $template();
-
     }
-
-
 }

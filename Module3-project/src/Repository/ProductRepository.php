@@ -1,6 +1,8 @@
 <?php
 
-namespace OnlineShopping\Model;
+namespace OnlineShopping\Repository;
+
+use OnlineShopping\Model\Product;
 
 interface ProductRepository
 {

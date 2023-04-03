@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8867a2fe-9f1b-44a6-be5d-e4af00ecb3f1" name="Changes" comment="" />
+    <list default="true" id="8867a2fe-9f1b-44a6-be5d-e4af00ecb3f1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3-project/src/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3-project/src/Application.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3-project/src/Controller/AddProductList.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3-project/src/Controller/AddProductList.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3-project/src/Model/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3-project/src/Model/Cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3-project/src/Model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3-project/src/Model/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3-project/src/Model/ProductRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3-project/src/Model/ProductRepositoryStorage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module4project/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Module4project/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module4project/src/Blogpost/PostsCategories.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Module4project/src/Blogpost/PostsCategories.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module5/chapter2/lesson4/src/Repository/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Module5/chapter2/lesson4/src/Repository/ProductRepository.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,19 +35,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Amir/lesson1c2/Module2project&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Amir/lesson1c2/Module2project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Amir\lesson1c2\Module2project\cli" />
@@ -53,7 +64,8 @@
       <updated>1679138149967</updated>
       <workItem from="1679138151432" duration="399000" />
       <workItem from="1679850324564" duration="2897000" />
-      <workItem from="1680336864251" duration="1232000" />
+      <workItem from="1680336864251" duration="1894000" />
+      <workItem from="1680524417323" duration="738000" />
     </task>
     <servers />
   </component>

@@ -9,16 +9,16 @@ class PostsCategories
     }
     public function  create(array $data): string
     {
-        $stm = $this->conn->prepare('INSERT INTO posts_category VALUES (:id_post, :id_category)');
+        $stm = $this->conn->prepare('INSERT INTO posts_category SELECT  :id FROM posts  UNION SELECT :id FROM categories');
 
-        $id_post = uniqid('post_id', true);
 
-        $stm->bindParam(':posts_id', $id_post);
+
+        $stm->bindParam(':posts_id', $data['id_posts']);
         $stm->bindParam(':posts_category', $data['id_category']);
 
         $stm->execute();
 
-        return $id_post;
+        return $data['id_posts'];
     }
 
 }

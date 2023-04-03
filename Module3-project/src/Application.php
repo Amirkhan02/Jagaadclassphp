@@ -22,6 +22,4 @@ class Application
         $response['html'] :  var_dump($response);
 
     }
-
-
 }

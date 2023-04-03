@@ -1,8 +1,8 @@
 <?php
 
-namespace OnlineShopping\Model;
+namespace OnlineShopping\Repository;
 
-use function OnlineShopping\Repository\allProducts;
+use OnlineShopping\Model\Product;
 
 class ProductRepositoryStorage extends Product
 {

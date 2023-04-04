@@ -6,6 +6,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use ApiProject\Controller\CreateCategoryController;
 use ApiProject\Controller\CreatePostController;
 use ApiProject\Controller\GetCategoriesController;
+use OpenApi\Annotations\OpenApi as OA;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -16,6 +17,7 @@ $request = Laminas\Diactoros\ServerRequestFactory::fromGlobals(
 );
 
 $router = new League\Route\Router;
+
 
 $router->post('/v1/blog/posts', \ApiProject\Controller\CreatePostController::class);
 $router->post('/v2/blog/category', \ApiProject\Controller\CreateCategoryController::class);

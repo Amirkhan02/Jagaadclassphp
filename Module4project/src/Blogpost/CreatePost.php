@@ -4,6 +4,7 @@ namespace ApiProject\Blogpost;
 
 class CreatePost
 {
+
     public function __construct(private \PDO $conn)
     {
     }

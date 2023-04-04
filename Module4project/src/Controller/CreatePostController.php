@@ -12,7 +12,14 @@ use Psr\Http\Message\ServerRequestInterface;
 class CreatePostController
 {
     /**
-     * @throws JsonException
+     * @OA\Post(
+     *     path="/v1/blog/posts",
+     *     description="Create new post",
+     *     @OA\Response(
+     *     response="200",
+     *     description="The post ID"
+     *   )
+     * )
      */
     public function __invoke(ServerRequestInterface $request): ResponseInterface
     {

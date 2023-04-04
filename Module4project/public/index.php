@@ -1,6 +1,11 @@
 <?php
 
+use Laminas\Diactoros\ServerRequestFactory;
+use League\Route\Router;
 use Psr\Http\Message\ServerRequestInterface;
+use ApiProject\Controller\CreateCategoryController;
+use ApiProject\Controller\CreatePostController;
+use ApiProject\Controller\GetCategoriesController;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -12,44 +17,9 @@ $request = Laminas\Diactoros\ServerRequestFactory::fromGlobals(
 
 $router = new League\Route\Router;
 
-$router->post('/v1/blog/posts', function (ServerRequestInterface $request){
-    $data = json_decode($request->getBody()->getContents(), true,512, JSON_THROW_ON_ERROR);
-    $conn = \ApiProject\Dbconnection::connect();
-    $createPost = new \ApiProject\Blogpost\CreatePost($conn);
-    $id = $createPost->create($data);
-
-    $res = [
-        'status' => 'success',
-        'data' => ['id' => $id],
-    ];
-    return new Laminas\Diactoros\Response\JsonResponse($res, 201);
-});
-
-$router->post('/v2/blog/category', function (ServerRequestInterface $request) use ($router) {
-    $data = Json_decode($request->getBody()->getContents(), true, 512, JSON_THROW_ON_ERROR);
-    $conn = \ApiProject\Dbconnection::connect();
-    $createCategory = new \ApiProject\Blogpost\CreateCategory($conn);
-    $id = $createCategory->create($data);
-
-    $res = [
-        'status' => 'success',
-        'data' => ['id' => $id],
-    ];
-    return new Laminas\Diactoros\Response\JsonResponse($res, 201);
-});
-
-$router->post('/v3/blog/postsCategories', function (ServerRequestInterface $request) use ($router) {
-    $data = Json_decode($request->getBody()->getContents(), true, 512, JSON_THROW_ON_ERROR);
-    $conn = \ApiProject\Dbconnection::connect();
-    $postsCategories = new \ApiProject\Blogpost\CreateCategory($conn);
-    $id = $postsCategories->create($data);
-
-    $res = [
-        'status' => 'success',
-        'data' => ['id' => $id],
-    ];
-    return new Laminas\Diactoros\Response\JsonResponse($res, 201);
-});
+$router->post('/v1/blog/posts', \ApiProject\Controller\CreatePostController::class);
+$router->post('/v2/blog/category', \ApiProject\Controller\CreateCategoryController::class);
+$router->get('/v3/blog/postsCategories', \ApiProject\Controller\GetCategoriesController::class);
 
 $response = $router->dispatch($request);
 (new Laminas\HttpHandlerRunner\Emitter\SapiEmitter)->emit($response);

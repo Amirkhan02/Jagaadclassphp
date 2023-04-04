@@ -16,6 +16,7 @@
     "require": {
         "league/route": "^5.1",
         "laminas/laminas-diactoros": "^2.24",
-        "laminas/laminas-httphandlerrunner": "^2.5"
+        "laminas/laminas-httphandlerrunner": "^2.5",
+        "vlucas/phpdotenv": "^5.5"
     }
 }

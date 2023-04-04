@@ -2,7 +2,7 @@
 
 namespace ApiProject\Blogpost;
 
-class PostsCategories
+class GetCategories
 {
     public function __construct(private \PDO $conn)
     {

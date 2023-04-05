@@ -16,7 +16,6 @@ function insertTransaction(array $inputs)
  )VALUES (?, ?, ?, ?, ?, ?, ?, ?)
  SQL;
 
- $fixedAccount = 1;
 
 $stmt = $mysqli->prepare($sql);
 $stmt->bind_param(
@@ -28,17 +27,26 @@ $inputs['transaction_date'],
 $inputs['occurrence'],
 $inputs['status'],
 $inputs['type'],
-$fixedAccount
+$inputs['account_id']
 );
 $stmt->execute();
 }
 
-function findTransactions(): array
+function findTransactions(string $type): array
 {
     $mysqli = connect();
-$sql = <<<SQL
-    SELECT * FROM transactions
-    SQL; 
-    $result = $mysqli->query($sql);
+    $sql = <<<SQL
+    SELECT t.*, a.name AS account_name
+    FROM transactions t
+    JOIN accounts a ON t.account_id=a.account_id
+    WHERE t.type = ?
+    AND a.user_id = ?
+    SQL;
+
+    $stmt = $mysqli->prepare($sql);
+    $stmt->bind_param('ss,', $type, authenticatedUser()['id']);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
     return $result->fetch_all(MYSQLI_ASSOC);
 }

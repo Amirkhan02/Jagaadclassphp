@@ -1,0 +1,17 @@
+{
+    "name": "jagaad/project3",
+    "description": "module3",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Project3\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hamme Shittu",
+            "email": "khanshittu50@gmail.com"
+        }
+    ],
+    "require": {}
+}

@@ -1,0 +1,10 @@
+{
+    "name": "jagaad/cli-shopping",
+    "description": "Simple CLI Shopping",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Jagaad\\": "src/"
+        }
+    }
+}

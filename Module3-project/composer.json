@@ -1,0 +1,17 @@
+{
+    "name": "jagaad/onlineshopping",
+    "description": "project",
+    "license": "no",
+    "autoload": {
+        "psr-4": {
+            "OnlineShopping\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hamme Shittu",
+            "email": "khanshittu50@gmail.com"
+        }
+    ],
+    "require": {}
+}

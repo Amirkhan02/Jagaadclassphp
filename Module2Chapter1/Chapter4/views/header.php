@@ -15,13 +15,19 @@ require_once __DIR__  . '/../boot.php';
 
 
     <h1>Personal Finance - <?=PAGE_TITLE?></h1>
+
     <?php if (isAuthenticated()): ?>
-    <ul>
-    <li><a href="/index.php">Accounts</a></li>
-    <li><a href="/transactions.php?type=expenses">Expenses</a></li>
-    <li><a href="/transactions.php?type=income">Income</a></li>
-    <li><a href="#">Reports</li>
-    <li><a href="/actions/handle-logout.php">Logout</li>
-</ul>
-<br/>
+    Hello, <?=authenticatedUser()['name']?>
+<br />
+
+    <div>
+    <a href="/index.php">Accounts</a> |
+    <a href="/transactions.php?type=expenses">Expenses</a> |
+    <a href="/transactions.php?type=income">Income</a>   |
+    <a href="/reports.php">Reports</a> |
+    <a href="/actions/handle-logout.php">Logout</a> |
+    </div>
+<hr>
+<br />
+
 <?php endif ?>

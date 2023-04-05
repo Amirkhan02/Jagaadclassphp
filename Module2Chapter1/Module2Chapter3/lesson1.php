@@ -1,5 +1,5 @@
 <?php
-$mssqli = new mysqli(
+$mysqli = new mysqli(
     'localhost',
     'root',
     '',
@@ -7,7 +7,7 @@ $mssqli = new mysqli(
 );
 
 //check connection
-if ($mssqli->connect_errno) {
+if ($mysqli->connect_errno) {
     echo 'failed to connect to MySQL: ' . $mysqli->connect_errno;
     exit;
 }

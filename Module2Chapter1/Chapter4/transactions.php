@@ -1,4 +1,8 @@
 <?php 
+
+require_once __DIR__ . '/boot.php';
+protectPage();
+
 $type = $_GET['type'] ?? 'expenses';
 
 $validTypes = ['income', 'expenses'];
@@ -11,13 +15,18 @@ if ($type === 'expenses') {
 } else {
     define('PAGE_TITLE', 'Income');
 }
-require_once __DIR__ . '/views/header.php';
-require_once __DIR__ . '/functions/db-transactions.php';
 
-$transactions = findTransactions();
+$transactions = findTransactions($type);
+$accounts = findAccounts();
+
+require_once __DIR__ . '/views/header.php';
 
 //var_dump($transactions);
 ?>
+<?php if (hasAlertStatus(ALERT_MSG_SUCCESS)): ?>
+<i><?=extractAlertMessage()?></i><br />
+<?php endif ?>
+
  
  <form method="post" action="actions/create-transaction.php">
       <label>Name:</label> <br/>
@@ -67,6 +76,16 @@ $transactions = findTransactions();
         <option value="received">Received</option>
         <?php endif ?>
         </select>
+        <br />
+
+        <label>Account:</label><br />
+      <select name="account_id" required> 
+        <option value=""></option>
+        <?php foreach ($accounts as $account): ?>
+     
+          <option value="<?=$account['account_id']?>"><?=$account['name']?></option>
+          <?php endforeach ?>
+      </select>
       
       <br/>
       <input type="hidden" name="type" value="<?=$type?>" />
@@ -91,14 +110,14 @@ $transactions = findTransactions();
     <tbody>
     <?php foreach ($transactions as $transaction): ?>
     <tr>
-            <td><?=$transaction['transaction_id']?></td>
+            <td align="right"><?=$transaction['transaction_id']?></td>
             <td><?=$transaction['name']?></td>
-            <td><?=$transaction['amount']?></td>
+            <td align="right">$ <?=$transaction['amount']?></td>
             <td><?=$transaction['category']?></td>
-            <td><?=$transaction['transaction_date']?></td>
-            <td><?=$transaction['occurrence']?></td>
+            <td><?=date('M/d/y', strtotime($transaction['transaction_date']))?></td>
+            <td><?=$transaction['occurrence'] ? 'Monthly' : 'No'?></td>
             <td><?=$transaction['status']?></td>
-            <td><?=$transaction['account_id']?></td>
+            <td><?=$transaction['account_name']?></td>
         </tr>
         <?php endforeach ?>
     </tbody>

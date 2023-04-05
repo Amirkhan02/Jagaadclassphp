@@ -1,0 +1,17 @@
+{
+    "name": "jagaad/oop-todo-list",
+    "description": "simple todo list using the oop",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "OopTodoList\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hamme Shittu",
+            "email": "khanshittu50@gmail.com"
+        }
+    ],
+    "require": {}
+}

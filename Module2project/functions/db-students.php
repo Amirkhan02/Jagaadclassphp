@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/connection.php';
-function insertStudent(array $inputs) 
+function insertStudent(array $inputs): void
 {
  $mysqli = connect();
  $sql = <<<SQL

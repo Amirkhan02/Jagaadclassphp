@@ -25,6 +25,7 @@ function login(string $email, string $password): bool
    if ($isValid) {
     $_SESSION['logged_in'] = true;
     $_SESSION['logged_user'] = $user['full_name'];
+    $_SESSION['logged_user_id'] = $user['user_id'];
    }
    return $isValid;
 }
@@ -40,10 +41,14 @@ function isAuthenticated(): bool
       && $_SESSION['logged_in'];
 }
 
-function authenticatedUser(): ?string
+function authenticatedUser(): ?array
 {
     if (isset($_SESSION['logged_usser'])) {
-        return $_SESSION['logged_user'];
+        return[
+
+         'id'=> $_SESSION['logged_user_id'],
+         'name'=> $_SESSION['logged_user'],
+        ];
     }
     return null;
 }
@@ -52,10 +57,14 @@ function logout(): void
 {
     unset(
         $_SESSION['logged_in'], 
-        $_SESSION['logged_user']
+        $_SESSION['logged_user'],
+        $_SESSION['logged_user_id']
     );
-
-die;
 }
-
-
+function protectPage(): void
+{
+    if (! isAuthenticated()) {
+        logout();
+        header('Location: /login.php');
+}
+}

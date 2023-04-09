@@ -23,8 +23,9 @@ class AddProductList implements Controller
     public function handle(array $inputs = []): array
     {
 
-        $template = require __DIR__ . '/../View/home.php';
+       $template = require __DIR__ . '/../View/home.php';
 
         return  $template();
+
     }
 }

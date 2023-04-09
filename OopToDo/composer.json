@@ -1,0 +1,16 @@
+{
+    "name": "jagaad/oop-to-do-list",
+    "description": "OOP practice",
+    "autoload": {
+        "psr-4": {
+            "OopToDoList\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hamme Shittu",
+            "email": "khanshittu50@gmail.com"
+        }
+    ],
+    "require": {}
+}

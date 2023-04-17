@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e66a83bf-d764-46ea-aa69-f4d060ee6d01" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../Module4project/.idea/Module4project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4project/.idea/Module4project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Module4project/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4project/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Module4project/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4project/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../project3/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../project3/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../project3/cli/db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../project3/cli/db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../project3/public/my-product.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../../project3/public/my-product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +121,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Amir/lesson1c2/Module5/chapter3/lesson1",
+    "last_opened_file_path": "C:/Users/Amir/lesson1c2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -150,7 +145,7 @@
       <workItem from="1680531869115" duration="31000" />
       <workItem from="1680605581273" duration="1347000" />
       <workItem from="1680646611392" duration="10746000" />
-      <workItem from="1681038984469" duration="20833000" />
+      <workItem from="1681038984469" duration="21416000" />
     </task>
     <servers />
   </component>

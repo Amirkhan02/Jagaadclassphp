@@ -18,6 +18,7 @@ class CreateCategoryController
      *     description="The category ID"
      *   )
      * )
+     * @throws JsonException
      */
     public function __invoke(ServerRequestInterface $request): ResponseInterface
     {

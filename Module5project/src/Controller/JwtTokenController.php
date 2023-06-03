@@ -23,8 +23,7 @@ class JwtTokenController
         $payload = [
             'sub' => '1234567890',
             'name' => 'Amir Khan',
-            'iat' => 1356999524,
-            'nbf' => 1357000000
+            'iat' => 1356999524
         ];
 
         $jwt = JWT::encode($payload, $this->secret);

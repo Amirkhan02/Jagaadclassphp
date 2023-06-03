@@ -1,0 +1,117 @@
+<?php
+
+namespace Project5\Entity;
+
+use Ramsey\Uuid\Uuid;
+use DateTimeImmutable;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
+use Ramsey\Uuid\Doctrine\UuidGenerator;
+use Ramsey\Uuid\UuidInterface;
+use Doctrine\ORM\Mapping as ORM;
+
+#[ORM\Entity, ORM\Table(name: 'post-slug')]
+class CreatePosts
+{
+    #[ORM\ManyToMany(targetEntity: CreateCategories::class, inversedBy: 'CreatePosts')]
+    Private Collection $categories;
+
+    public function __construct(
+        #[ORM\Id]
+        #[ORM\Column(type: 'uuid', unique: true)]
+        #[ORM\GeneratedValue(strategy: 'CUSTOM')]
+        #[ORM\CustomIdGenerator(class: UuidGenerator::class)]
+        private UuidInterface $id,
+        #[ORM\Column(name: 'title', type: 'string', nullable: false)]
+        private string $title,
+        #[ORM\Column(name: 'slug', type: 'string', nullable: false)]
+        private string $slug,
+        #[ORM\Column(name: 'content', type: 'string', nullable: false)]
+        private string $content,
+        #[ORM\Column(name: 'thumbnail', type: 'string', nullable: false)]
+        private string $thumbnail,
+        #[ORM\Column(name: 'author', type: 'string', nullable: false)]
+        private string $author,
+        #[ORM\Column(name: 'posted_at', type: 'date_immutable', nullable: false)]
+        private DateTimeImmutable $posted_at
+
+    ){
+        $this->categories = new ArrayCollection();
+    }
+    public static function populate(array $data): self
+    {
+        return new self(
+            Uuid::fromString($data['id']),
+            $data['title'],
+            $data['slug'],
+            $data['content'],
+            $data['thumbnail'],
+            $data['author'],
+            $data['posted_at']
+        );
+    }
+    public function id(): UuidInterface
+    {
+        return $this->id;
+    }
+    public function title(): string
+    {
+        return $this->title;
+    }
+    public function slug(): string
+    {
+        return $this->slug;
+    }
+    public function content(): string
+    {
+        return $this->content;
+    }
+    public function thumbnail(): string
+    {
+        return $this->thumbnail;
+    }
+    public function author(): string
+    {
+        return $this->author;
+    }
+    public function postedAt(): DateTimeImmutable
+    {
+        return $this->posted_at;
+    }
+    public function getCategories(): Collection
+    {
+        return $this->categories;
+    }
+    public function addCategory(CreateCategories $category): self
+    {
+        if (!$this->categories->contains($category)){
+            $this->categories->add($category);
+        }
+        return $this;
+    }
+    public function removeCategory(CreateCategories $category): self
+    {
+        $this->categories->removeElement($category);
+        return $this;
+    }
+    public function toArray(): array
+    {
+        $categories = [];
+        foreach ($this->getcategories() as $category) {
+            $categories[] = $category->toArray();
+        }
+        return [
+            'id' => $this->id(),
+            'title' => $this->title(),
+            'slug' => $this->slug(),
+            'content' => $this->content(),
+            'thumbnail' => $this->thumbnail(),
+            'author' => $this->author(),
+            'posted_at' => $this->posted_at()->format('y-m-d H:i:s'),
+            'categories' => $categories
+        ];
+    }
+}
+
+
+
